@@ -1,4 +1,15 @@
 
-body {
-    background: gold;
+/* define the color onto variable */
+/* color
+-primary
+-secondary
+-accent
+*/
+:root {
+    --color-primary: #2584ff;
+    --color-secondary: #00d9ff;
+    --color-accent: #ff3400;
+    --color-headings: #1b0760;
+    --color-body: #918ca4;
+
 }
