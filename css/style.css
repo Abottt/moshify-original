@@ -65,3 +65,85 @@ p {
         font-size: 2.4rem;
     }
 }
+
+/* links */
+a {
+    text-decoration: none;
+}
+
+.link-arrow {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.link-arrow::after{
+    content: "-->";
+    margin-left: 5px;
+    transition: margin 0.15s;
+}
+
+.link-arrow:hover::after{
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+    .link-arrow{
+        font-size: 1.5rem;
+    }
+}
+
+/* Badges */
+/* applying the 2nd object oriented CSS rule where we should separate structure and skin styling */
+/* define 2 different class 
+basic strucure: padding, font size
+skin: color sizes
+*/
+
+.badge {
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    white-space: nowrap;
+    /* white space: prevent badge for wraping to second line, used for limited space  */
+    /* structure ex */
+}
+
+.badge--primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+.badge--secondary {
+    background: var(--color-secondary);
+    color: white;
+}
+
+.badge--small {
+    font-size: 1.6rem;
+}
+
+/* so we actually style all the component first,
+for example, for the badges. in the markup there is 3 class, 
+badge, rimary style, secondary style this depend on the design too
+but we can just use same markup dan change the style so it will be more covenient */
+
+/* in mobile version,the bosy text is larger so it's comfortable to see on small screen
+start styling from mobile version
+
+set the markup in the component folder
+*/
+
+/* badges for larger screen */
+
+@media screen and (min-width:1024px) {
+    .badge {
+        font-size: 1.5rem;
+        /* note the dekstop version using 1.5rem and mobile device use 2rem */  
+    }
+    .badge--small{
+        font-size: 1.2rem;
+    }
+}
