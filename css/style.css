@@ -1,4 +1,6 @@
-
+/* mobile first approach */
+/* you can notice at the badges styling, usually the diferrent is 
+at the font size and component margin/padding */
 html {
     font-size: 62.5%;
 }
@@ -121,6 +123,7 @@ skin: color sizes
     color: white;
 }
 
+/* badge for bigger screen */
 .badge--small {
     font-size: 1.6rem;
 }
@@ -133,7 +136,8 @@ but we can just use same markup dan change the style so it will be more covenien
 /* in mobile version,the bosy text is larger so it's comfortable to see on small screen
 start styling from mobile version
 
-set the markup in the component folder
+set the markup copy in the component folder so we not forgot if we have so much component
+make all the markup in all class we made
 */
 
 /* badges for larger screen */
@@ -145,5 +149,58 @@ set the markup in the component folder
     }
     .badge--small{
         font-size: 1.2rem;
+    }
+}
+
+/* making list */
+/* 
+shorthand making list automatic
+ul.list>li{Item $}*3
+ */
+ /* the $ sign is equal n, so it will automaticall */
+/* example::afterul.list>li{annan $}*4
+in result: 
+    <ul class="list">
+      <li>annan 1</li>
+      <li>annan 2</li>
+      <li>annan 3</li>
+      <li>annan 4</li>
+    </
+*/
+
+/* makin the inline list */
+.list {
+    list-style: none;
+    padding-left: 0;
+    /* browser add padding by default */
+    color: var(--color-headings);
+}
+
+.list--inline .list__item{
+    /* Block, Element, Modifier(BEM) double underscore: separate block from it's element  (internal part o the list) */
+    display: inline-block;
+    margin-right: 2rem;
+   
+}
+/* making the tick icon remember if it not show it because we set the 
+padding left 0 for the inline list */
+.list--tick {
+    list-style-image: url(/images/tick.svg);
+    padding-left: 3rem;
+}
+
+/* notice the tick and the ist__item at the design is have more space
+we can add more style in particullar skin, targetting the item */
+
+.list--tick .list__item {
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* for larger screen, the diferrent is the tick and the item space is smaller */
+
+@media screen and (min-width:1024px) {
+    .list--tick .list__item {
+        padding-left: 0;
     }
 }
