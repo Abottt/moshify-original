@@ -204,3 +204,35 @@ we can add more style in particullar skin, targetting the item */
         padding-left: 0;
     }
 }
+
+
+/* Icons */
+/* combine all th svg into the sprite so we can reduce the number of the HTTP request to the server
+use svg sprite generator and download the sprite then copy to the markup
+*/
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.icon--primary {
+    fill: var(--color-primary);
+}
+
+/* remembert this properties to set icon to the center
+using span(inline element) display inline flex
+*/
+.icon-container {
+    background: #f3f9fa;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* object oriented ccs 
+we can separatinf structure from the skin and make diferrent skin and combine the diferrent skin to achieve diferrent result 
+*/
