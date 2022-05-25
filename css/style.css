@@ -224,7 +224,7 @@ use svg sprite generator and download the sprite then copy to the markup
 }
 
 .icon--primary {
-    fill: var(--color-primary);
+    fill: var(--color-primary)
 }
 
 /* remembert this properties to set icon to the center
@@ -437,3 +437,20 @@ make div.card>header.card__header>div.card__body
     }
   }
   
+
+  /* Media Objects */
+.media {
+    display: flex;
+}
+
+.media__title {
+    margin-top: 0;
+}
+
+.media__body {
+    margin: 0 2rem;
+}
+
+.media__image {
+    margin-top: 1rem;
+}
