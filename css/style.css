@@ -224,8 +224,17 @@ use svg sprite generator and download the sprite then copy to the markup
     height: 40px;
 }
 
+.icon--small {
+    width: 28px;
+    height: 28px;
+}
+
 .icon--primary {
     fill: var(--color-primary)
+}
+
+.icon--white {
+    fill: white;
 }
 
 /* remembert this properties to set icon to the center
@@ -240,6 +249,11 @@ using span(inline element) display inline flex
     justify-content: center;
     align-items: center;
 }
+
+.icon-container--accent {
+    background: var(--color-accent);
+}
+
 
 /* object oriented ccs 
 we can separatinf structure from the skin and make diferrent skin and combine the diferrent skin to achieve diferrent result 
@@ -462,7 +476,7 @@ make div.card>header.card__header>div.card__body
     font-size: 3rem;
     font-style: italic;
     color: var(--color-body-darker);
-    line-height: 1.3    ;
+    line-height: 1.3;
 }
 .quote__text::before {
     content: open-quote;
@@ -519,5 +533,39 @@ make div.card>header.card__header>div.card__body
 @media screen and (min-width:1024px) {
     .grid--1x3 {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Testimonial Component  */
+/* making the image responsive */
+
+.testimonial {
+    padding: 3rem;
+}
+
+.testimonial__image {
+    position: relative;
+}
+
+.testimonial__image > img {
+    width: 100%;
+    /* image be responsive */
+}
+/* using (direct child selector)> to target element inside a container it's rare */
+
+.testimonial__image > .icon-container {
+    position: absolute;
+    top: 3rem;
+    right: -32px;
+}
+
+@media screen and (min-width: 768px) {
+    .testimonial .quote,
+    .testimonial .quote__author {
+        font-size: 2rem;
+    }
+
+    .testimonial .quote {
+        margin-left: 6rem;
     }
 }
