@@ -302,6 +302,11 @@ we can separatinf structure from the skin and make diferrent skin and combine th
     background: #ec3000;
 }
 
+.btn--stretched {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
 .btn--block {
     width: 100%;
     display: inline-block;
@@ -567,5 +572,51 @@ make div.card>header.card__header>div.card__body
 
     .testimonial .quote {
         margin-left: 6rem;
+    }
+}
+
+/* Callous */
+
+.callout {
+    padding: 4rem;
+    border-radius: 5px;
+}
+
+.callout--primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+.callout__heading {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.callout .btn {
+    justify-self: center;
+    align-self: center;
+}
+
+.callout__content {
+    text-align: center;
+}
+
+@media screen and (min-width:768px) {
+    .callout .grid--1x2 {
+        grid-template-columns: 1fr auto;
+    }
+    .callout__content {
+        text-align: left;
+    }
+    
+    .callout .btn {
+        justify-self: start;
+        margin: 0 3rem;
+    }
+
+    .callout__heading {
+        margin-bottom:1rem;
     }
 }
