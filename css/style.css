@@ -20,7 +20,6 @@ html {
     --color-border: #ccc;
     --color-body-darker: #5c5577;
     --border-radius: 30px;
-
 }
 
 *,
@@ -31,7 +30,7 @@ html {
 
 /* typography (font and size)*/
 body {
-    font-family: Inter, Helvetica, sans-serif;
+    font-family: Inter, Arial, Helvetica, sans-serif;
     color: var(--color-body);
     font-size: 2.4rem;
     line-height: 1.5;
@@ -123,18 +122,19 @@ skin: color sizes
 }
 
 .badge--primary {
-    background: #126de4;
-    color: white;
+    background: var(--color-primary);
+    color: #fff;
 }
 
 .badge--secondary {
-    background: #02cdf1;
-    color: white;
+    background: var(--color-secondary);
+    color: #fff;
 }
 
 /* badge for bigger screen */
 .badge--small {
     font-size: 1.6rem;
+    padding: 0.5rem 1.5rem;
 }
 
 /* so we actually style all the component first,
@@ -269,10 +269,18 @@ we can separatinf structure from the skin and make diferrent skin and combine th
     font-weight: 600;
     padding: 2rem 3rem;
     text-transform: uppercase;
-    white-space: no-wrap;
+    white-space: nowrap;
     text-align: center;
     margin: 1rem 0;
+    outline: 0;
     
+}
+
+.btn .icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    vertical-align: middle;
 }
 
 .btn--primary {
@@ -332,16 +340,16 @@ we can separatinf structure from the skin and make diferrent skin and combine th
 
 /* Inputs */
 .input {
-    padding: 1.5rem 3.5rem;
-    border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
-    outline: 0;
+    border: 1px solid var(--color-border);
     color: var(--color-headings);
+    font-size: 2rem;
+    outline: 0;
+    padding: 1.5rem 3.5rem;
 }
 
 ::placeholder {
     color: #cdcbd7;
-    font-size: 2rem;
 }
 
 /* input groups */
@@ -355,17 +363,16 @@ we can separatinf structure from the skin and make diferrent skin and combine th
 .input-group .input {
     border: 0;
     flex-grow: 1;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 2rem;
 }
 
 .input-group .btn {
     margin: 4px;
 }
 
-@media screen and(min-width:1024px) {
+@media screen and (min-width:1024px) {
     .input {
         font-size: 1.5rem;
-        border-radius: var(--border-radius);
     }
     
 }
@@ -501,7 +508,7 @@ make div.card>header.card__header>div.card__body
 
 .quote__organization {
     color: var(--color-headings);
-    opacity: .4;
+    opacity: 0.4;
     font-size: 2rem;
     font-style: normal;
 }
@@ -517,7 +524,7 @@ make div.card>header.card__header>div.card__body
     }
     
     .quote__author{
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
 
     .quote__organization {
@@ -551,6 +558,7 @@ make div.card>header.card__header>div.card__body
 
 .testimonial__image {
     position: relative;
+    margin: 0 3rem;
 }
 
 .testimonial__image > img {
@@ -566,6 +574,10 @@ make div.card>header.card__header>div.card__body
 }
 
 @media screen and (min-width: 768px) {
+    .testimonial__image {
+        margin: 0;
+      }
+
     .testimonial .quote,
     .testimonial .quote__author {
         font-size: 2rem;
@@ -573,6 +585,7 @@ make div.card>header.card__header>div.card__body
 
     .testimonial .quote {
         margin-left: 6rem;
+        margin-right: 0;
     }
 }
 
@@ -793,7 +806,34 @@ make div.card>header.card__header>div.card__body
              align-self: center;
          }
          
-
      }
 
      /* remember bot all your problem in link is the / */
+
+     /* domain block */
+     .block-domain .input-group {
+        box-shadow: 0 0 50px 20px #e6ebee7c;
+        border: 0;
+        margin: 4rem auto;
+        max-width: 670px;
+     }
+
+     .block-domain__prices {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 6rem);
+        font-size: 2rem;
+        font-weight: 600;
+        justify-items: center;
+        max-width: 700px;
+        margin: 0 auto;
+        max-width: 700px;
+     }
+
+     
+@media screen and (min-width: 768px) {
+    .block-domain__prices {
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+  }
+  
