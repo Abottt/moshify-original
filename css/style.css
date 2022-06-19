@@ -874,3 +874,28 @@ make div.card>header.card__header>div.card__body
     margin: 0 auto;
 }
 
+/* feature component */
+
+.feature {
+    gap: 4rem 2rem ;
+    margin: 12rem;
+}
+
+.feature__heading {
+    margin: 1rem 0;
+}
+
+.feature__image {
+    width: 100%;
+}
+
+.feature:first-of-type {
+    margin-top: 6rem;
+}
+
+
+@media screen and (min-width:768px) {
+    .feature:nth-of-type(even) .feature__content {
+        order: 2;
+    }
+}
