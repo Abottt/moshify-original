@@ -29,6 +29,11 @@ html {
 }
 
 /* typography (font and size)*/
+::selection {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
 body {
     font-family: Inter, Arial, Helvetica, sans-serif;
     color: var(--color-body);
@@ -51,7 +56,8 @@ h2 {
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 3rem; 
+    font-weight: 500;
 }
 
 p {
@@ -88,13 +94,13 @@ a {
     font-weight: bold;
 }
 
-.link-arrow::after{
+.link-arrow::after {
     content: "-->";
     margin-left: 5px;
     transition: margin 0.15s;
 }
 
-.link-arrow:hover::after{
+.link-arrow:hover::after {
     margin-left: 10px;
 }
 
@@ -182,7 +188,6 @@ in result:
     list-style: none;
     padding-left: 0;
     /* browser add padding by default */
-    color: var(--color-headings);
 }
 
 .list--inline .list__item{
@@ -235,7 +240,7 @@ use svg sprite generator and download the sprite then copy to the markup
 }
 
 .icon--white {
-    fill: white;
+    fill: #fff;
 }
 
 /* remembert this properties to set icon to the center
@@ -411,7 +416,7 @@ make div.card>header.card__header>div.card__body
 }
 
   /* Plans */
-.plam {
+.plan {
     transition: transform .2s ease-in-out;
 }
 
@@ -720,13 +725,20 @@ make div.card>header.card__header>div.card__body
     color: #7b858b;
   }
   
-  .block--dark .block__heading {
+  /* .block--dark .block__heading {
     color: #fff;
-  }
+  } */
+
+  
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
+  color: #fff;
+}
   
   .block--skewed-right {
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
   }
   
   .block--skewed-left {
@@ -897,5 +909,28 @@ make div.card>header.card__header>div.card__body
 @media screen and (min-width:768px) {
     .feature:nth-of-type(even) .feature__content {
         order: 2;
+    }
+}
+
+/* Showcase Block */
+
+.block-showcase__image > img {
+    width: 100%;
+}
+
+
+@media screen and (min-width:768px) {
+    .block-showcase .grid {
+        grid-template-columns: 50% 50%;
+    }
+
+    .block-showcase__image {
+        justify-self: end;
+        margin: 0 3.5rem;
+    }
+
+    .block-showcase__image > img {
+        width: auto;
+        max-width: 700px;
     }
 }
