@@ -832,7 +832,7 @@ make div.card>header.card__header>div.card__body
 
 
      @media screen and (min-width:768px) {
-         .hero__content {
+         .hero__content {s
              text-align: left;
              align-self: center;
          }    
@@ -840,7 +840,7 @@ make div.card>header.card__header>div.card__body
 
      @media screen and (min-width:1024) {
          .hero {
-            padding-top: 0%;
+            padding-top: 0;
          }  
      }
 
