@@ -964,7 +964,6 @@ make div.card>header.card__header>div.card__body
 }
 
 .footer__brand {
-    /* margin-top: 5rem; */
     text-align: center;
 }
 
@@ -978,6 +977,14 @@ make div.card>header.card__header>div.card__body
     font-size: 2.1rem;
     color: #fff;
     opacity: 0.3;
+}
+
+
+@media screen and (max-width:767px) {
+    .footer__brand {
+        margin-top: 5rem;
+    }
+    
 }
 
 @media screen and (min-width:768px) {
