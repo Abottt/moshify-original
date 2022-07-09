@@ -1,4 +1,4 @@
-import './style.css';
+
 
 const collapsibles = document.querySelectorAll(".collapsible");
 collapsibles.forEach((item) =>
@@ -6,3 +6,4 @@ collapsibles.forEach((item) =>
     this.classList.toggle("collapsible--expanded");
   })
 );
+
